@@ -92,7 +92,7 @@ def read_ws(ws,client):
     while data:
         entities = json.loads(data)
         for entity in entities:
-            myWorld.set(entity)
+            myWorld.set(entity, entities[entity])
         data = ws.receive()
 
     return None
